@@ -1,0 +1,135 @@
+body{
+    background-color:thistle;
+    border: solid 20px black;
+    margin:0px;
+    padding:20px;
+}
+
+nav{
+    background-color:gainsboro;
+    margin:5px;
+    padding:0;
+    border-radius: 15px;
+}
+#logoText{
+    font-weight: bolder; 
+    color:indigo;
+}
+
+nav ul{ 
+    text-align: center;
+    margin:6px;
+    padding:3px;
+}
+nav ul li{
+    display:inline;
+    color:blueviolet;
+    margin-left: 50px;
+    margin-right:50px;
+    font-weight: bold;
+}
+
+a:active{
+        text-decoration:solid royalblue;
+}
+
+p{
+    text-align:left;
+    font-size: 20px;
+    color: rgb(20, 129, 218);
+}
+
+#forArtH{
+    color: indigo;
+    font-size: 24px;
+    text-decoration-line: underline;
+    text-decoration-style:solid;
+    text-decoration-color:red;
+    text-decoration-thickness: 2px;
+}
+
+h3{
+    text-decoration: underline 2px red ;
+    text-decoration-style:solid;
+    font-family:'Times New Roman';
+    color:indigo;
+    font-weight:bold;
+    font-size: 24px;
+    
+}
+
+section{
+    background-color:rgb(240, 242, 238);
+    margin:30px;
+    padding:8px;
+    border-radius:15px;
+    border:double 8px red;
+}
+
+#def,#indef{
+    color:rgb(20, 129, 218);
+    font-size:20px;
+}
+
+#datehy,#cardhy{
+    margin:30px;
+    padding:10px;
+    text-align: center;
+    font-weight: bold;
+    font-size:24px;
+    text-decoration: underline 2px black;
+}
+
+
+
+.imgcenter{
+    display:flex;
+    justify-content: center;
+}
+.imgcenter img{
+    border: solid 10px black;
+}
+
+
+.articlestype{
+   font-family: serif;
+   font-style:italic;
+   font-weight:bold;
+   font-size:20px ;
+   color: rgb(20, 129, 218);
+}
+
+/*now for profile card*/
+#person{
+  
+}
+#person img{
+    border-radius: 360px;
+    border:solid 2px red;
+}
+
+#forcenter{
+    display: flex;
+    justify-content: center;
+}
+
+#profilecard{
+    padding:2px;
+    margin:0px 100px 100px 100px;
+    border:solid 8px black;
+    border-radius: 10px;
+    background-color: azure;
+    color:black;
+    text-align:center;
+    font-family:Helvetica;
+    font-size:10px;
+    max-width: 400px;
+}
+.pro{
+    font-size:20px;
+}
+
+
+
+
+
