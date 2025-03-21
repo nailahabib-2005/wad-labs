@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables and Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br>
+<nav>
+<header>This is lab task 4 in which we have to make table and form.</header>
+</nav>
+<hr><br>
+
+    <section>
+    <table>
+        <caption>GRADING SHEET</caption>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>CLASS</th>
+            <th>SUBJECT</th>
+            <th>MARKS</th>
+            <th>GENDER</th>
+            <th>REMARKS</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <colgroup>
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+        </colgroup>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Hafeez</td>
+            <td>10</td>
+            <td>English</td>
+            <td>88</td>
+            <td>M</td>
+            <td>excellent</td>
+            <td>hafeez@gmail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Maryam</td>
+            <td>10</td>
+            <td>Urdu</td>
+            <td>70</td>
+            <td>F</td>
+            <td>good</td>
+            <td>maryam@gmail.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Salma</td>
+            <td>9</td>
+            <td>Chemistry</td>
+            <td>80</td>
+            <td>F</td>
+            <td>good+</td>
+            <td>salma@gmail.com</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Bushra</td>
+            <td>8</td>
+            <td>Chemistry</td>
+            <td>68</td>
+            <td>F</td>
+            <td>needs focus</td>
+            <td>bushra@gmail.com</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Naila</td>
+            <td>10</td>
+            <td>Physics</td>
+            <td>75</td>
+            <td>F</td>
+            <td>excellent</td>
+            <td>naila@gmail.com</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Haseeb</td>
+            <td>9</td>
+            <td>Physics</td>
+            <td>76</td>
+            <td>M</td>
+            <td>excellent</td>
+            <td>haseeb@gmail.com</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Sifat</td>
+            <td>5</td>
+            <td>Biology</td>
+            <td>70</td>
+            <td>M</td>
+            <td>satisfactory</td>
+            <td>sifat@gmail.com</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Iqbal</td>
+            <td>7</td>
+            <td>Science</td>
+            <td>70</td>
+            <td>M</td>
+            <td>satisfactory</td>
+            <td>iqbal@gmail.com</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Noor</td>
+            <td>8</td>
+            <td>Maths</td>
+            <td>90</td>
+            <td>F</td>
+            <td>great job</td>
+            <td>noor@gmail.com</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Sehrish</td>
+            <td>9</td>
+            <td>Islamiyat</td>
+            <td>80</td>
+            <td>F</td>
+            <td>excellent</td>
+            <td>sehrish@gmail.com</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr><td colspan="8">It is the grading sheet of students of different class</td></tr>
+    </tfoot>
+    </table>
+    </section>
+    
+    <br><hr>
+
+    <p>
+        The form to enter data in the table  
+    </p>
+    <hr><br>
+
+    <section>
+    <form method="get">
+        <legend><h1>Student Data Form</h1></legend>
+        <label><h2>Student Data</h2></label>
+        <fieldset>
+            <label for="id">ID No:</label>
+            <input type="number" id="id" placeholder="Enter id" required><br><br> 
+
+            <label for="name">NAME:</label>
+            <input type="text" id="name" placeholder="Enter name" required><br><br> 
+
+            <label for="class">CLASS:</label>
+            <input type="number" id="class" placeholder="Enter class" max="10" min="3" required><br><br> 
+
+            <label for="subject">SUBJECT:</label>
+            <select id="subject">
+                <option>Biology</option>
+                <option>Chemistry</option>
+                <option>English</option>
+                <option>Islamiyat</option>
+                <option>Maths</option>
+                <option>Physics</option>
+                <option>Science</option>
+                <option>Urdu</option>
+            </select><br><br>
+
+            <label for="marks">MARKS:</label>
+            <input type="number" id="marks" placeholder="Enter marks" min="0" max="100" required><br><br>  
+
+            <label>GENDER:</label><br>
+            <input type="radio" id="male" name="gender" value="male"> 
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+            <br>
+
+            <label for="remarks">Remarks:</label>
+                <select id="remarks">
+                    <optgroup label="A above 85">
+                    <option>Great Job</option>
+                    </optgroup>
+                    <optgroup label="A- above 80">
+                    <option>Excellent</option>
+                    </optgroup>
+                    <optgroup label="B above 70">
+                    <option>Satisfactory</option>
+                    </optgroup>
+                    <optgroup label="C above 60">
+                    <option>Can Improve</option>
+                    </optgroup>
+                    <optgroup label="D above 50">
+                    <option>Work Harder</option>
+                    </optgroup>
+                </select>
+            <br><br> 
+            <label for="mail">G-Mail:</label>
+            <input type="email" id="mail" placeholder="Enter gmail" required><br><br>  
+
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</section>
+<br><hr>
+<section>
+    <h3>Report</h3>
+    <p id="report">
+        In this lab task i made a table using semantic tags like thead,tfoot and tbody
+        on student grading sheet. After that i made form to enter data in this table 
+        using differnt type of input types and at last I have done the css styles on these 
+        things   or called sections.
+    </p>
+</section>
+
+<hr>
+<div id="foot">
+<footer>&copy; Naila Habib website</footer>
+</div>
+</body>
+</html>
