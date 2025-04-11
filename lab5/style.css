@@ -1,0 +1,209 @@
+:root {
+    --bg-main: #eeded1;
+    --bg-section: #FFFAFE;
+    --border-main: rgb(165, 98, 17);
+    --border-dark: rgb(78, 51, 18);
+    --text-main: #824d1d;
+    --text-light: #da8f49;
+    --text-nav: rgb(92, 54, 8);
+    --text-hover: rgb(165, 100, 22);
+    --text-italic: #74451a;
+    --profile-border: #c28332;
+    --footer-bg: #ffFAFE;
+    --nav-bg: rgb(233, 202, 173);
+    --card-bg: #FFFAFE;
+    --card-text: rgb(56, 33, 5);
+    --font-main: 20px;
+    --font-head: 24px;
+}
+
+body {
+    background-color: var(--bg-main);
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+
+@media (max-width:400px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "H" "N" "A" "D" "I" "P" "T" "pc" "C" "F";
+    }
+}
+
+@media (min-width:401px) and (max-width:600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "H H" "N N" "A D" "I I" "P P" "T T" "pc pc" "C C" "F F";
+    }
+}
+
+@media (min-width:601px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "H H H" "N N N" "A D I" "P P P" "T T T" "pc pc pc" "C C C" "F F F";
+    }
+}
+
+header {
+    display: flex;
+    justify-content: left;
+    grid-area: H;
+}
+
+#logoText {
+    font-weight: bolder;
+    color: rgb(117, 68, 8);
+}
+
+nav {
+    grid-area: N;
+}
+
+nav ul {
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--nav-bg);
+}
+
+nav ul li {
+    display: inline;
+    color: var(--text-nav);
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--text-hover);
+}
+
+#art {
+    grid-area: A;
+}
+
+#def, #indef {
+    font-size: var(--font-main);
+    color: var(--text-light);
+}
+
+#forArtH {
+    color: var(--text-main);
+    font-size: var(--font-head);
+    text-decoration: underline 2px var(--text-main);
+}
+
+h3 {
+    text-decoration: underline 2px var(--text-main);
+    font-family: 'Times New Roman';
+    color: var(--text-main);
+    font-weight: bold;
+    font-size: var(--font-head);
+}
+
+section {
+    background-color: var(--bg-section);
+    padding: 8px;
+    border-radius: 15px;
+    border: double 8px var(--border-main);
+}
+
+.imgcenter {
+    grid-area: P;
+    justify-self: center;
+}
+
+.imgcenter img {
+    border: double 10px var(--border-main);
+    border-radius: 8px;
+}
+
+#datehy, #cardhy {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--font-head);
+    text-decoration: underline 2px var(--text-main);
+    color: var(--text-main);
+}
+
+#datehy {
+    grid-area: T;
+}
+
+#cardhy {
+    grid-area: pc;
+}
+
+.articlestype {
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: var(--font-main);
+    color: var(--text-italic);
+}
+
+p, dl {
+    color: var(--text-main);
+    text-align: left;
+    font-size: var(--font-main);
+    font-weight: 500;
+}
+
+footer {
+    grid-area: F;
+    justify-self: center;
+    background-color: var(--footer-bg);
+    color: var(--text-main);
+    font-size: var(--font-main);
+    border: solid 3px var(--border-dark);
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+}
+
+#person img {
+    border-radius: 360px;
+    border: solid 4px var(--profile-border);
+}
+
+.forcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: C;
+    width: 100%;
+}
+
+#profilecard {
+    padding: 2px;
+    border: solid 6px var(--border-main);
+    border-radius: 10px;
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 10px;
+    max-width: 500px;
+}
+
+.pro {
+    font-size: 22px;
+}
