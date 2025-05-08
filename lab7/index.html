@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE</title>
+<style>
+    body {
+      text-align: center;
+      font-family: Arial;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      border: 2px solid #4CAF50;
+      font-size: 18px;
+      width: 60%;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #4CAF50;
+    }
+    thead {
+      background-color: #f2f2f2;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    tfoot td {
+      font-weight: bold;
+      background-color: #e8f5e9;
+    }
+    p{
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+
+</head>
+<body>
+            <p>Table By Javascript</p>
+<script>
+    const reg = [1, 2, 3, 4,5 ,6];
+    const name = ["Naila", "Salma", "Bushra", "Maryam","Hafeez","Haseeb"];
+    const gpa = [3.5, 3.8, 3.2, 3.4,3.0,3.6];
+
+    const table = document.createElement("table");
+    document.body.appendChild(table);
+
+    const thead = document.createElement("thead");
+    const hRow = document.createElement("tr");
+    const titles = ["Reg No", "Name", "GPA"];
+    for (let i = 0; i < titles.length; i++) {
+        const th = document.createElement("th");
+        th.textContent = titles[i];
+        hRow.appendChild(th);
+    }
+    thead.appendChild(hRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+    for (let i = 0; i < reg.length; i++) {
+        const row = document.createElement("tr");
+
+        const td1 = document.createElement("td");
+        td1.textContent = reg[i];
+        row.appendChild(td1);
+
+        const td2 = document.createElement("td");
+        td2.textContent = name[i];
+        row.appendChild(td2);
+
+        const td3 = document.createElement("td");
+        td3.textContent = gpa[i];
+        row.appendChild(td3);
+
+        tbody.appendChild(row);
+    }
+    table.appendChild(tbody);
+
+    const tfoot = document.createElement("tfoot");
+    const ftRow = document.createElement("tr");
+    const td = document.createElement("td");
+    td.id = "avg";  
+    ftRow.appendChild(td);
+    tfoot.appendChild(ftRow);
+    table.appendChild(tfoot);
+
+    const button = document.createElement("button");
+    button.textContent = "Submit";
+    button.onclick = calculateAverage;
+    document.body.appendChild(document.createElement("br")); 
+    document.body.appendChild(button);
+
+    function calculateAverage() {
+        let total = 0;
+        for (let i = 0; i < gpa.length; i++) {
+            total += gpa[i];
+        }
+        const avg = total / gpa.length;
+        document.getElementById("avg").textContent= avg.toFixed(2);
+    }
+</script>
+
+</body>
+</html>
